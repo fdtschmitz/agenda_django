@@ -105,11 +105,11 @@ def submit_evento(request):
 
 Vamos testar nossa aplicação. Crie um novo evento:
 
-![Untitled](05_images/Untitled.png)
+![Untitled](Images/05_images/Untitled.png)
 
 Clique em “Salvar”. Se tudo ocorrer bem, você deverá voltar a tela de Agendamentos e visualizar o evento que acabou de salvar:
 
-![Untitled](05_images/Untitled%201.png)
+![Untitled](Images/05_images/Untitled%201.png)
 
 Antes de seguirmos com o próximo tópico, vamos incluir mais um campo em eventos a fim de salvar também o local. Este campo poderá ser branco e nulo.
 
@@ -165,7 +165,7 @@ python manage.py migrate core 0003
 
 Se tudo correr bem, você verá no Terminal:
 
-![Untitled](05_images/Untitled%202.png)
+![Untitled](Images/05_images/Untitled%202.png)
 
 Com isso, podemos atualizar nossos templates para exibir o local. Vamos começar com ‘agenda.html’:
 

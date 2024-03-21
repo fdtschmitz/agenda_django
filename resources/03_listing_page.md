@@ -6,7 +6,7 @@ O Django oferece em seus modelos de templates a capacidade de se utilizar expres
 
 Primeiramente precisamos criar nosso diretório de templates. Dentro do diretório do projeto, crie uma pasta chamada ‘Templates”. Agora dentro dela crie um arquivo html, que chamaremos de ‘agenda.html’.
 
-![Untitled](03_images/Untitled.png)
+![Untitled](Images/03_images/Untitled.png)
 
 Com o nosso diretório criado, precisamos registrar o caminho. Abra o arquivo ‘settings.py’ e procure a constante ‘TEMPLATES’. O código deverá ficar como abaixo:
 
@@ -57,7 +57,7 @@ urlpatterns = [
 
 Agora, rodando nossa aplicação, é possível acessar ‘[http://127.0.0.1:8000/agenda/](http://127.0.0.1:8000/agenda/)’ e visualizar a página que criamos:
 
-![Untitled](03_images/Untitled%201.png)
+![Untitled](Images/03_images/Untitled%201.png)
 
 ### Listando Eventos
 
@@ -101,7 +101,7 @@ Precisamos ajustar também o arquivo html para poder listar o eventos, conforme 
 
 Agora, ao acessarmos a página agenda, é isso que visualizamos:
 
-![Untitled](03_images/Untitled%202.png)
+![Untitled](Images/03_images/Untitled%202.png)
 
 A data e horário ainda estão em um formato estranho. Vamos corrigir isso. Abra o arquivo ‘models.py’ e faça o seguinte ajuste na classe:
 
@@ -199,7 +199,7 @@ Agora precisamos ajustar o arquivo ‘agenda.html’, pois não é mais necessá
 
 Nossa página agora ficou desta forma:
 
-![Untitled](03_images/Untitled%203.png)
+![Untitled](Images/03_images/Untitled%203.png)
 
 Agora, quando quisermos criar outros blocos de conteúdo, somente precisamos criar o arquivo com o ‘block content’, uma vez que o header e o footer seguem padronizados.
 

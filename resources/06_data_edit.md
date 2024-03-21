@@ -61,9 +61,9 @@ Precisamos agora de um botão executar essa ação. Vamos ajustar o arquivo ‘a
 
 Salve e teste a aplicação. Agora é possível excluir os registros diretamente da tela Agendamentos, apenas clicando em “Excluir”.
 
-![Untitled](06_images/Untitled.png)
+![Untitled](Images/06_images/Untitled.png)
 
-![Untitled](06_images/Untitled%201.png)
+![Untitled](Images/06_images/Untitled%201.png)
 
 Agora que conseguimos excluir os registros, precisamos poder editar. Observe no código HTML, que deixamos um “#” no link de ‘Editar’. Não será necessário criar uma rota nova, pois iremos aproveitar a mesma rota de inclusão de registro. Ainda em ‘agenda.html’, ajuste o arquivo conforme abaixo:
 
@@ -172,10 +172,10 @@ def submit_evento(request):
 
 Desta forma, antes de efetuar a alteração, é verificado se o usuário que está editando é o mesmo que criou o evento. Agora podemos editar nossos eventos:
 
-![Untitled](06_images/Untitled%202.png)
+![Untitled](Images/06_images/Untitled%202.png)
 
-![Untitled](06_images/Untitled%203.png)
+![Untitled](Images/06_images/Untitled%203.png)
 
-![Untitled](06_images/Untitled%204.png)
+![Untitled](Images/06_images/Untitled%204.png)
 
 Com isso nossa aplicação já executa todas as operações básicas: criação, edição e exclusão. Estamos chegando na reta final deste artigo, onde iremos incluir [Filtros, Responses e Configurações](07_filter_response.md)

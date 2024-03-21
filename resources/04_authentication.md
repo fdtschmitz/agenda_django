@@ -24,7 +24,7 @@ def lista_eventos(request):
 
 Agora se o seu usuário não estiver logado no painel de Administração ele verá uma tela de erro ao acessar a agenda:
 
-![Untitled](04_images/Untitled.png)
+![Untitled](Images/04_images/Untitled.png)
 
 Vamos criar uma tela de login para corrigir isso. 
 
@@ -128,11 +128,11 @@ def lista_eventos(request):
 
 Vamos testar nosso login. Digite seu usuário e senha e tente logar.
 
-![Untitled](04_images/Untitled%201.png)
+![Untitled](Images/04_images/Untitled%201.png)
 
 Deve apresentar um erro:
 
-![Untitled](04_images/Untitled%202.png)
+![Untitled](Images/04_images/Untitled%202.png)
 
 Isso nos diz que o sistema está sentindo falta de um token CSRF para fazer a autenticação. Vamos corrigir isso. Em ‘login.html’, ao lado do ‘form’ inclua o seguinte código:
 
@@ -142,7 +142,7 @@ Isso nos diz que o sistema está sentindo falta de um token CSRF para fazer a au
 
 Com isso, ao tentar logar, você deverá ser redirecionado corretamente:
 
-![Untitled](04_images/Untitled%203.png)
+![Untitled](Images/04_images/Untitled%203.png)
 
 ### Logout
 
@@ -183,13 +183,13 @@ def logout_user(request):
 
 Se tudo estiver correto, agora você poderá efetuar o logout sem problemas:
 
-![Untitled](04_images/Untitled%204.png)
+![Untitled](Images/04_images/Untitled%204.png)
 
 ### Senha Inválida
 
 Por enquanto, na tela de login, se você errar a senha, será redirecionado para uma tela de erro:
 
-![Untitled](04_images/Untitled%205.png)
+![Untitled](Images/04_images/Untitled%205.png)
 
 Para tratarmos este problema, em ‘views.py’ vamos incluir o tratamento na função ‘submit_login’:
 
@@ -244,6 +244,6 @@ Vamos incluir também na tela de login:
 
 Agora, se a senha estiver errada, será apresentado o erro:
 
-![Untitled](04_images/Untitled%206.png)
+![Untitled](Images/04_images/Untitled%206.png)
 
 Com o nosso Login e Logout funcionando, precisamos de uma tela para inserir os dados em nossa agenda. Este será o tema a seguir: [Inserção de Dados](05_data_inserts.md)

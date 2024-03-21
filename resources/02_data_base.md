@@ -12,7 +12,7 @@ python manage.py migrate
 
 Este comando cria as tabelas padrão do Django. Entre elas, o painel de Administrador. Agora é possível acessar o painel presente em http://127.0.0.1:8000/
 
-![Untitled](02_images/Untitled.png)
+![Untitled](Images/02_images/Untitled.png)
 
 Porém, ainda não temos um usuário para logar nesta tela. Para criarmos um super usuário, no terminal digite:
 
@@ -22,15 +22,15 @@ python manage.py createsuperuser --username admin
 
 Na sequência será solicitado um email padrão, e uma senha forte. Caso a senha não seja forte o suficiente, será mostrado um aviso em tela. 
 
-![Untitled](02_images/Untitled 1.png)
+![Untitled](Images/02_images/Untitled 1.png)
 
 Como o objetivo é puramente didático, vou optar por manter a senha fraca digitando ‘y’.
 
 Agora é possível logar e visualizar as opções disponíveis no momento.
 
-![Untitled](02_images/Untitled 2.png)
+![Untitled](Images/02_images/Untitled 2.png)
 
-![Untitled](02_images/Untitled 3.png)
+![Untitled](Images/02_images/Untitled 3.png)
 
 Por enquanto temos somente acesso à tela de criação de usuários e grupos. Porém, mais adiante, poderemos observer também o app criado.
 
@@ -50,7 +50,7 @@ Para quem já tem familiaridade com SQL, vai perceber que há uma diferença sig
 
 Para manipular nossa agenda, criaremos uma tabela ‘eventos’ contendo seus dados básicos:
 
-![Untitled](02_images/Untitled 4.png)
+![Untitled](Images/02_images/Untitled 4.png)
 
 No diretório do seu app, abra o arquivo ‘models.py’. Aqui criaremos as tabelas personalizadas para este artigo. Seu código deverá estar desta forma:
 
@@ -206,7 +206,7 @@ python manage.py migrate core 0001
 
 Se tudo ocorrer bem, você verá no terminal:
 
-![Untitled](02_images/Untitled 5.png)
+![Untitled](Images/02_images/Untitled 5.png)
 
 Feito isso, para utilizar essa tabela é necessário registrar em nossa aplicação. No diretório do seu app, abra o arquivo ‘admin.py’. Utilize o código a seguir:
 
@@ -221,15 +221,15 @@ admin.site.register(Evento)
 
 Agora, ao rodarmos novamente o ‘manage.py’, e acessando o painel de Administrador ([http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)) visualizaremos:
 
-![Untitled](02_images/Untitled 6.png)
+![Untitled](Images/02_images/Untitled 6.png)
 
 Em ‘Eventos’ será possível adicionar um novo. Clique em “+Add” e preencha como quiser e clique em Save.
 
-![Untitled](02_images/Untitled 7.png)
+![Untitled](Images/02_images/Untitled 7.png)
 
 Observe que o evento aparece como “Evento object (1)”, pois, ainda não determinamos como este objeto deve ser tratado.
 
-![Untitled](02_images/Untitled 8.png)
+![Untitled](Images/02_images/Untitled 8.png)
 
 Para isso, abra novamente o arquivo ‘models.py’ e inclua na classe:
 
@@ -249,7 +249,7 @@ class Evento(models.Model):
 
 Atualizando o painel deveremos ver:
 
-![Untitled](02_images/Untitled 9.png)
+![Untitled](Images/02_images/Untitled 9.png)
 
 Vamos incluir mais alguns atributos para visualizar no painel. No arquivo ‘admin.py’, inclua a seguinte classe:
 
@@ -268,7 +268,7 @@ admin.site.register(Evento, EventoAdmin)
 
 Novamente, atualizando o painel, deveremos ver algo como:
 
-![Untitled](02_images/Untitled 10.png)
+![Untitled](Images/02_images/Untitled 10.png)
 
 É possível também ajustar os títulos para deixá-los mais apresentáveis. Em ‘models.py’, inclua os parâmetros:
 
@@ -288,7 +288,7 @@ class Evento(models.Model):
 
 Atualizando o painel:
 
-![Untitled](02_images/Untitled 11.png)
+![Untitled](Images/02_images/Untitled 11.png)
 
 Agora iremos atribuir o evento a um usuário. Como já temos uma tabela de usuários padrão do Django, vamos utilizá-la para este projeto. Novamente em ‘models.py’ vamos criar uma chave estrangeira para ligarmos as duas tabelas:
 
@@ -320,11 +320,11 @@ python manage.py makemigrations core
 
 Porém, esbarramos em um problema. Como se trata de um campo onde não podem existir valores núlos e já haviam registros no banco, ele precisa saber o que fazer com os registros existentes:
 
-![Untitled](02_images/Untitled 12.png)
+![Untitled](Images/02_images/Untitled 12.png)
 
 Por hora vamos utilizar a opção numero 1. Feito isso, vamos colocar também o número 1 como opção padrão deste momento. Assim o ‘admin’ será o usuário dos eventos registrados.
 
-![Untitled](02_images/Untitled 13.png)
+![Untitled](Images/02_images/Untitled 13.png)
 
 Ainda no Terminal utilize:
 
@@ -377,17 +377,17 @@ Agora vamos persistir essas alterações no banco:
 python manage.py migrate core 0002
 ```
 
-![Untitled](02_images/Untitled 14.png)
+![Untitled](Images/02_images/Untitled 14.png)
 
 Atualizando nosso painel agora é possível ver nossas alterações:
 
-![Untitled](02_images/Untitled 15.png)
+![Untitled](Images/02_images/Untitled 15.png)
 
 Vamos criar mais um evento:
 
-![Untitled](02_images/Untitled 16.png)
+![Untitled](Images/02_images/Untitled 16.png)
 
-![Untitled](02_images/Untitled 17.png)
+![Untitled](Images/02_images/Untitled 17.png)
 
 Em ‘admin.py’ podemos incluir um filtro para facilitar a visualização. Faça estas alterações na classe:
 
@@ -401,10 +401,10 @@ admin.site.register(Evento, EventoAdmin)
 
 Atualizando nosso painel, deveremos ver:
 
-![Untitled](02_images/Untitled 18.png)
+![Untitled](Images/02_images/Untitled 18.png)
 
 É possível selecionar outros campos para o filtro, como o título ou Data do evento.
 
-![Untitled](02_images/Untitled 19.png)
+![Untitled](Images/02_images/Untitled 19.png)
 
 Com o nosso banco pronto, podemos criar uma [Página de listagem](03_listing_page.md).

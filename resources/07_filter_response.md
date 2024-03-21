@@ -35,7 +35,7 @@ Com a configuração atual da nossa função ‘lista_eventos’, mesmo eventos 
 evento = Evento.objects.filter(usuario=usuario)
 ```
 
-![Untitled](07_images/Untitled.png)
+![Untitled](Images/07_images/Untitled.png)
 
 A fim de ocultar eventos passados, precisamos incluir um filtro de data. Em ‘view.py’, vamos ajustar a função ‘lista_eventos’:
 
@@ -57,7 +57,7 @@ Como não é possível incluir no filtro comparações como > ou <, utilizamos o
 
 Agora ao acessar a página você verá somente os compromissos que irão acontecer até 1 hora antes do evento.
 
-![Untitled](07_images/Untitled%201.png)
+![Untitled](Images/07_images/Untitled%201.png)
 
 ### Eventos Atrasados
 
@@ -102,7 +102,7 @@ Feito isso é necessário ajustar a página ‘agenda.html’:
 
 Com isso os eventos atrasados agora são mostrados em vermelho na página de agenda.
 
-![Untitled](07_images/Untitled%202.png)
+![Untitled](Images/07_images/Untitled%202.png)
 
 ### Responses
 
@@ -128,7 +128,7 @@ def delete_evento(request, id_evento):
 
 Agora, por exemplo, se o usuário forçar o acesso a um evento que não é dele, haverá uma tela de erro específica:
 
-![Untitled](07_images/Untitled%203.png)
+![Untitled](Images/07_images/Untitled%203.png)
 
 Outra opção no tratamento de responses é o módulo ‘JsonResponse’. Para exemplificar este módulo, vamos criar uma lista em json a partir de uma rota específica. Em ‘urls.py’, inclua a rota:
 
@@ -165,7 +165,7 @@ def json_lista_evento(request):
 
 Agora, ao acessar a rota ‘http://127.0.0.1:8000/agenda/lista/’ temos o seguinte retorno:
 
-![Untitled](07_images/Untitled%204.png)
+![Untitled](Images/07_images/Untitled%204.png)
 
 Para finalizar, vamos transformar essa rota em uma espécie de api para integração com outras aplicações. Primeiramente vamos remover a necessidade de login para essa função. Depois vamos ajustar para solicitar o id de usuário. Sua função deve ficar como abaixo:
 
@@ -201,11 +201,11 @@ urlpatterns = [
 
 Ao acessar a rota ‘http://127.0.0.1:8000/agenda/lista/1/’, por exemplo, temos o seguinte retorno:
 
-![Untitled](07_images/Untitled%205.png)
+![Untitled](Images/07_images/Untitled%205.png)
 
 Usando uma extensão para facilitar a leitura de json (no Chrome, JSON Viewer):
 
-![Untitled](07_images/Untitled%206.png)
+![Untitled](Images/07_images/Untitled%206.png)
 
 # Conclusão
 

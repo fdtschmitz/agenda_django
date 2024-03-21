@@ -20,7 +20,7 @@ django-admin startproject nome_do_projeto
 
 Isso fará com que o Django crie a estrutura básica de arquivos com o nome do seu projeto. No decorrer do artigo será abordada a função de cada arquivo.
 
-![Estrutura de arquivos do projeto no PyCharm](01_images/Untitled.png)
+![Estrutura de arquivos do projeto no PyCharm](Images/01_images/Untitled.png)
 
 Estrutura de arquivos do projeto no PyCharm
 
@@ -28,7 +28,7 @@ Observe que foi criado um arquivo chamado ‘manage.py’. Este é um dos arquiv
 
 Na tela de edição de configurações Run/Debug do PyCharm faça as seguintes alterações:
 
-![Tela de Run/Debug Configurations no PyCharm](01_images/Untitled 1.png)
+![Tela de Run/Debug Configurations no PyCharm](Images/01_images/Untitled 1.png)
 
 - No campo ‘script’ coloque o caminho para o arquivo ‘manage.py’
 - No campo ‘Script parameters’ adicione o texto ‘runserver’
@@ -36,11 +36,11 @@ Na tela de edição de configurações Run/Debug do PyCharm faça as seguintes a
 
 Feito isso você estará apto a rodar o servidor. Se tudo estiver certo, você verá em seu ambiente local o link para acesso:
 
-![Mensagem no Terminal](01_images/Untitled 2.png)
+![Mensagem no Terminal](Images/01_images/Untitled 2.png)
 
 No link poderemos visualizar:
 
-![Untitled](01_images/Untitled 3.png)
+![Untitled](Images/01_images/Untitled 3.png)
 
 ### Criando um novo app
 
@@ -54,7 +54,7 @@ django-admin startapp core
 
 Assim como na criação do projeto, este comando cria a estrutura de arquivos para o seu app.
 
-![Estrutura de arquivos do Projeto e App](01_images/Untitled 4.png)
+![Estrutura de arquivos do Projeto e App](Images/01_images/Untitled 4.png)
 
 Estrutura de arquivos do Projeto e App
 
