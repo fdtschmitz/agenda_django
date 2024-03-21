@@ -76,4 +76,4 @@ INSTALLED_APPS = [
 
 Agora que seu app está configurado, seguiremos com a criação do banco de dados.
 
-[Banco de Dados](02_data_base)
+[Banco de Dados](02_data_base.md)
