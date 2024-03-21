@@ -25,3 +25,7 @@ Este artigo está separado em tópicos para facilitar a navegação entre os tem
 - Documentação Oficial: [Django](https://docs.djangoproject.com/en/5.0/)
 
 - Comunidade Django: [Django Community](https://www.djangoproject.com/community/)
+
+### Créditos
+
+Artigo baseado no projeto apresentado pelo prof. [Rafael Galleani](https://www.linkedin.com/in/rafael-galleani/) para o curso "Desenvolvimento Web com Python e Django" da DIO. O repositório original pode ser visitado [aqui](https://github.com/rafegal/agenda).
